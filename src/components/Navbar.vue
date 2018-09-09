@@ -1,6 +1,8 @@
 <template>
+
     <div class='navbar'>
-        <div class="navbar-fixed">
+        <div class="navbar">
+
             <nav class="nav-wrapper indigo">
                 <a id='specialA' class="brand-logo center">Geek Stuff</a>
                 <a href="#" class="sidenav-trigger" data-target="mobile-links">
@@ -13,18 +15,24 @@
                     <li><a href="" class="btn white indigo-text">Login</a></li>
                 </ul>
             </nav>
+
         </div>
+        <!--using a href links so page reloads here-->
         <ul class="sidenav" id="mobile-links">
             <li>
-                <router-link to='/' style='cursor:pointer; text-decoration:none'>Home</router-link>
+                <a href="/">Home</a>
+                <!--<router-link to='/' style='cursor:pointer; text-decoration:none'>Home</router-link>-->
             </li>
             <li>
-                <router-link :to="{ name: 'Products'}" style='cursor:pointer; text-decoration:none'>View Products</router-link>
+                <a href="/products">View Products</a>
+                <!--<router-link :to="/products" style='cursor:pointer; text-decoration:none'>View Products</router-link>-->
             </li>
             <li>
-                <router-link to='/createproduct' style='cursor:pointer; text-decoration:none'>Create Product</router-link>
+                <a href="/createproduct">Create Product</a>
+                <!--<router-link to='/createproduct' style='cursor:pointer; text-decoration:none'>Create Product</router-link>-->
             </li>
         </ul>
+
 
         <!--<ul class="sidenav" id="mobile-links">
             <router-link to='/' tag='li' style='cursor:pointer'>Home</router-link>
@@ -32,6 +40,8 @@
             <router-link to='/createProduct' tag='li' style='cursor:pointer'>Create Product</router-link>
         </ul>-->
     </div>
+
+
 
 </template>
 
@@ -54,9 +64,6 @@
 
         }),
         methods: {
-            open: function () {
-                console.log('slideoutOpen')
-            }
 
         }
 

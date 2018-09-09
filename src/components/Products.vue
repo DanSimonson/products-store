@@ -1,5 +1,28 @@
 <template>
-    <Navbar/>
+
+    <div class="container-fluid">
+        <Navbar/>
+        <h4>Online Store</h4>
+        <div class="row">
+            <div class="col m3" v-for="item in forSale" :key='item.invId'>
+                <div class="card blue-grey darken-1">
+                    <div class="card-image">
+                        <img :src="item.image" alt="">
+                        <a href="" class="halfway-fab btn-floating pink pulse" @click="addToCart(item.invId)">
+                            <i class="material-icons">
+                                add_shopping_cart
+                            </i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">{{item.name}}</span>
+                        <p> {{item.price}}</p>
+                    </div>
+                </div>
+            </div>
+            {{ shoppingCart }}
+        </div>
+    </div>
 
 </template>
 
@@ -18,7 +41,7 @@
         },
         data() {
             return {
-                card_text: 'Lorem ipsum dolor sit amet, brute iriure accusata ne mea. Eos suavitate referrentur ad, te duo agam libris qualisque, utroque quaestio accommodare no qui. Et percipit laboramus usu, no invidunt verterem nominati mel. Dolorem ancillae an mei, ut putant invenire splendide mel, ea nec propriae adipisci. Ignota salutandi accusamus in sed, et per malis fuisset, qui id ludus appareat.',
+
             }
         },
         computed: {
@@ -35,7 +58,12 @@
 
 <!-- Add "scoped " attribute to limit CSS to this component only -->
 <style scoped>
-    v-layout {
-        padding: 0;
+    .container-fluid {
+        text-align: center;
+    }
+
+    .card {
+        height: 500px;
+        overflow: hidden;
     }
 </style>
