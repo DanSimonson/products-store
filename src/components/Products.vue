@@ -2,13 +2,23 @@
 
     <div class="container-fluid">
         <Navbar/>
-        <h4>Online Store</h4>
+        <div id='topRow' class="row">
+            <div class='col m9'>
+                <h4>Online Store</h4>
+            </div>
+            <div class='col m3'>
+                <a class="waves-effect blue-grey darken-1 black-text btn-large">Cart: {{shoppingCart.length}}</a>
+            </div>
+
+
+        </div>
+
         <div class="row">
             <div class="col m3" v-for="item in forSale" :key='item.invId'>
                 <div class="card blue-grey darken-1">
                     <div class="card-image">
                         <img :src="item.image" alt="">
-                        <a href="" class="halfway-fab btn-floating pink pulse" @click="addToCart(item.invId)">
+                        <a class="halfway-fab btn-floating pink pulse" @click="addToCart(item.invId)">
                             <i class="material-icons">
                                 add_shopping_cart
                             </i>
@@ -58,6 +68,10 @@
 
 <!-- Add "scoped " attribute to limit CSS to this component only -->
 <style scoped>
+    #topRow {
+        margin-top: 20px;
+    }
+
     .container-fluid {
         text-align: center;
     }
