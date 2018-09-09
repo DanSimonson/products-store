@@ -1,16 +1,14 @@
 <template>
-
     <div class="container-fluid">
         <Navbar/>
         <div id='topRow' class="row">
-            <div class='col m9'>
+            <div class='col m8'>
                 <h4>Online Store</h4>
             </div>
-            <div class='col m3'>
-                <a class="waves-effect blue-grey darken-1 black-text btn-large">Cart: {{shoppingCart.length}}</a>
+            <div class='col m4'>
+                <!--<a class="waves-effect blue-grey darken-1 black-text btn-large">Cart: {{shoppingCart.length}}</a>-->
+                <Cart/>
             </div>
-
-
         </div>
 
         <div class="row">
@@ -30,16 +28,16 @@
                     </div>
                 </div>
             </div>
-            {{ shoppingCart }}
+
         </div>
     </div>
 
 </template>
 
 <script>
-    import Cart from './Cart'
     import { dollars } from '../filter.js';
     import Navbar from './Navbar'
+    import Cart from './Cart'
 
     export default {
         name: 'Products',
@@ -47,7 +45,8 @@
             dollars
         },
         components: {
-            Navbar
+            Navbar,
+            Cart
         },
         data() {
             return {
