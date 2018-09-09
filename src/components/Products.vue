@@ -24,12 +24,13 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title">{{item.name}}</span>
-                        <p> {{item.price}}</p>
+                        <p> {{ item.price | dollars }}</p>
                     </div>
                 </div>
             </div>
 
         </div>
+        <Footer/>
     </div>
 
 </template>
@@ -37,6 +38,7 @@
 <script>
     import { dollars } from '../filter.js';
     import Navbar from './Navbar'
+    import Footer from './Footer'
     import Cart from './Cart'
 
     export default {
@@ -46,6 +48,7 @@
         },
         components: {
             Navbar,
+            Footer,
             Cart
         },
         data() {

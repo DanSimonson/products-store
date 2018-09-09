@@ -3,7 +3,7 @@
     <div class='navbar'>
         <div class="navbar">
 
-            <nav class="nav-wrapper indigo">
+            <nav class="nav-wrapper blue-grey darken-1">
                 <a id='specialA' class="brand-logo center">Geek Stuff</a>
                 <a href="#" class="sidenav-trigger" data-target="mobile-links">
                     <i class="material-icons">menu</i>

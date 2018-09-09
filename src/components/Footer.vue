@@ -1,6 +1,6 @@
 <template>
-    <v-footer color="indigo" app>
-        <span class="white--text">&copy; 2018</span>
+    <v-footer color="blue-grey darken-1" app>
+        <span class="white--text">mariposaweb &copy; 2018</span>
     </v-footer>
     <!-- footer 
     <footer class="page-footer grey darken-3">
@@ -19,7 +19,11 @@
         name: 'Footer'
     }
 </script>
-<style>
+<style scoped>
+    v-footer {
+        margin-top: 20px;
+    }
+
     body {
         display: flex;
         min-height: 100vh;
