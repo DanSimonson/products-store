@@ -1,13 +1,13 @@
 <template>
     <div class="container-fluid">
-        <Navbar/>
+        <Navbar />
         <div id='topRow' class="row">
             <div class='col m8'>
                 <h4>Online Store</h4>
             </div>
             <div class='col m4'>
                 <!--<a class="waves-effect blue-grey darken-1 black-text btn-large">Cart: {{shoppingCart.length}}</a>-->
-                <Cart/>
+                <Cart />
             </div>
         </div>
 
@@ -28,9 +28,10 @@
                     </div>
                 </div>
             </div>
+            {{forSale}}
 
         </div>
-        <Footer/>
+        <Footer />
     </div>
 
 </template>

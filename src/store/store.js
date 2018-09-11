@@ -1,9 +1,11 @@
 import Vue from "vue";
 import Vuex from "vuex";
-
+import * as firebase from "firebase";
+//import { firebasemutations } from "vuexfire";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
+  //mutations: { ...firebaseMutations },
   state: {
     forSale: [
       {
@@ -47,6 +49,27 @@ export default new Vuex.Store({
     },
     removingFromCart(state, index) {
       state.shoppingCart.splice(index, 1);
+    },
+    createProduct(state, payload) {
+      console.log(payload);
+      const randomNumber = Math.floor(Math.random() * 500);
+      /*for (var i = 0; i < state.forSale.length; i++) {
+        if (randomNumber !== state.forsale[i].invId) {
+          payload.invId = randomNumber;
+          break;
+        }
+      }*/
+      state.forSale.forEach(product => {
+        //product.price -= payload
+        if (randomNumber !== product.invId) {
+          payload.invId = randomNumber;
+        } else {
+          //randomNumber already used-- try again
+          payload.invId = Math.floor(Math.random() * 500);
+        }
+      });
+      //payload.invId = randomNumber;
+      state.forSale.push(payload);
     }
   },
   actions: {
@@ -55,6 +78,29 @@ export default new Vuex.Store({
     },
     removeFromCart(context, index) {
       context.commit("removingFromCart", index);
+    },
+    createProduct({ commit }, payload) {
+      const product = {
+        name: payload.name,
+        image: payload.image,
+        price: payload.price
+      };
+      //next reach out to firebase, get id, store values
+      firebase
+        .database()
+        .ref("products")
+        .push(product)
+        .then(data => {
+          //console.log(data);
+          const key = data.key;
+          commit("createProduct", {
+            ...product,
+            id: key
+          });
+        })
+        .catch(error => {
+          console.log(error);
+        });
     }
   }
 });
