@@ -37,6 +37,7 @@
 </template>
 
 <script>
+    import { firebaseAction } from 'vuexfire'
     import { dollars } from '../filter.js';
     import Navbar from './Navbar'
     import Footer from './Footer'

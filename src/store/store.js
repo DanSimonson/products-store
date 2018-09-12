@@ -1,13 +1,15 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import * as firebase from "firebase";
-//import { firebasemutations } from "vuexfire";
+import { firebaseMutations } from "vuexfire";
+import { firebaseAction } from "vuexfire";
+
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   //mutations: { ...firebaseMutations },
   state: {
-    forSale: [
+    /*forSale: [
       {
         invId: 1,
         name: "Computer Geek Wisdom T-Shirt",
@@ -36,7 +38,8 @@ export default new Vuex.Store({
           "https://res.cloudinary.com/dmglopmul/image/upload/v1536206695/product-store/tie.jpg",
         price: 299
       }
-    ],
+    ]*/
+    forSale: [],
     shoppingCart: []
   },
   getters: {
@@ -44,6 +47,8 @@ export default new Vuex.Store({
     shoppingCart: state => state.shoppingCart
   },
   mutations: {
+    ...firebaseMutations,
+
     addingToCart(state, invId) {
       state.shoppingCart.push(invId);
     },
@@ -101,6 +106,9 @@ export default new Vuex.Store({
         .catch(error => {
           console.log(error);
         });
-    }
+    },
+    setProductsRef: firebaseAction(({ bindFirebaseRef }, { ref }) => {
+      bindFirebaseRef("forSale", ref);
+    })
   }
 });
