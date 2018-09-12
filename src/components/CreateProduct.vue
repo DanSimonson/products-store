@@ -41,11 +41,11 @@
                 </v-flex>
             </v-layout>
         </v-container>
-        {{forSale}}
+        <!--{{forSale}} used for testing-->
     </div>
 </template>
 <script>
-    
+
     import { dbProductsRef } from '../firebaseConfig.js'
     import Navbar from './Navbar'
     export default {

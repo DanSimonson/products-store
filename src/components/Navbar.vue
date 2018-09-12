@@ -9,8 +9,8 @@
                     <i class="material-icons">menu</i>
                 </a>
                 <ul class="right hide-on-med-and-down">
-                    <router-link to='/' tag='li' style='cursor:pointer'>Home</router-link>
-                    <router-link to='/products' tag='li' style='cursor:pointer'>View Products</router-link>
+                    <!--<router-link to='/' tag='li' style='cursor:pointer'>Home</router-link>-->
+                    <router-link to='/products' tag='li' style='cursor:pointer'>Products</router-link>
                     <router-link to='/createproduct' tag='li' style='cursor:pointer'>Create Product</router-link>
                     <li><a href="" class="btn white indigo-text">Login</a></li>
                 </ul>
@@ -19,12 +19,12 @@
         </div>
         <!--using a href links so page reloads here-->
         <ul class="sidenav" id="mobile-links">
-            <li>
+            <!--<li>
                 <a href="/">Home</a>
-                <!--<router-link to='/' style='cursor:pointer; text-decoration:none'>Home</router-link>-->
-            </li>
+                <router-link to='/' style='cursor:pointer; text-decoration:none'>Home</router-link>
+            </li>-->
             <li>
-                <a href="/products">View Products</a>
+                <a href="/products">Products</a>
                 <!--<router-link :to="/products" style='cursor:pointer; text-decoration:none'>View Products</router-link>-->
             </li>
             <li>

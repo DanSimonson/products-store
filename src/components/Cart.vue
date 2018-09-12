@@ -3,10 +3,11 @@
         <!--<a class="waves-effect blue-grey darken-1 black-text btn" @click.native="dialog = true"><i class="material-icons right">shopping_cart</i>Items
             In Cart:({{ shoppingCart.length }})
         </a>-->
-        <v-btn blue-grey darken-1 @click.native="dialog = true"><i class="material-icons right">shopping_cart</i>View Items
+        <v-btn blue-grey darken-1 @click.native="dialog = true"><i class="material-icons right">shopping_cart</i>View
+            Items
             in Cart: {{cartLength}}</v-btn>
         <div class="text-xs-center">
-            <v-dialog v-model="dialog" persistent max-width="290">
+            <v-dialog v-model="dialog" persistent max-width="390">
                 <!--<v-btn slot="activator" color="primary" dark>Open Dialog</v-btn>-->
                 <v-card>
                     <v-card-title class="headline">Shopping Cart</v-card-title>
@@ -17,7 +18,7 @@
                                     <td>{{ item.name }}</td>
                                     <td>{{ item.price | dollars }}</td>
                                     <td>
-                                        <v-btn icon @click="removeFromCart(index)" color="warning"><i class="material-icons">
+                                        <v-btn @click="removeFromCart(index)" red lighten-2><i class="material-icons">
                                                 remove_shopping_cart
                                             </i></v-btn>
                                     </td>
@@ -49,7 +50,7 @@
         },
         data() {
             return {
-                dialog: false
+                dialog: false,
             }
         },
         computed: {
@@ -58,13 +59,13 @@
             checkout() {
                 return this.$store.getters.shoppingCart.map((cartItem) => {
                     return this.$store.getters.forSale.find((forSaleItem) => {
-                        return cartItem === forSaleItem.invId;
+                        return cartItem === forSaleItem.name;
                     });
                 });
             },
             total() {
-                return this.checkout.reduce((acc, cur) => acc + cur.price, 0);
-            },
+                return this.checkout.reduce((acc, cur) => parseFloat(acc) + parseFloat(cur.price), 0);
+            }
         },
         methods: {
             removeFromCart(index) {

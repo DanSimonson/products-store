@@ -49,8 +49,8 @@ export default new Vuex.Store({
   mutations: {
     ...firebaseMutations,
 
-    addingToCart(state, invId) {
-      state.shoppingCart.push(invId);
+    addingToCart(state, name) {
+      state.shoppingCart.push(name);
     },
     removingFromCart(state, index) {
       state.shoppingCart.splice(index, 1);
@@ -78,8 +78,8 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    addToCart(context, invId) {
-      context.commit("addingToCart", invId);
+    addToCart(context, name) {
+      context.commit("addingToCart", name);
     },
     removeFromCart(context, index) {
       context.commit("removingFromCart", index);

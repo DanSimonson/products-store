@@ -10,25 +10,27 @@
                 <Cart />
             </div>
         </div>
-
+        <!--'item.invId'>-->
         <div class="row">
-            <div class="col m3" v-for="item in forSale" :key='item.invId'>
+            <div class="col m3" v-for="(item,key) in forSale" :key='item.name'>
                 <div class="card blue-grey darken-1">
                     <div class="card-image">
                         <img :src="item.image" alt="">
-                        <a class="halfway-fab btn-floating pink pulse" @click="addToCart(item.invId)">
+                        <a class="halfway-fab btn-floating pink pulse" @click="addToCart(item.name)">
+                            <!--item.invId-->
                             <i class="material-icons">
                                 add_shopping_cart
                             </i>
                         </a>
                     </div>
                     <div class="card-content">
-                        <span class="card-title">{{item.name}}</span>
+                        <span class="card-title">{{item.name}}
+                        </span>
                         <p> {{ item.price | dollars }}</p>
                     </div>
                 </div>
             </div>
-            {{forSale}}
+            <!--{{forSale}} used for testing-->
 
         </div>
         <Footer />
@@ -37,7 +39,7 @@
 </template>
 
 <script>
-    import { firebaseAction } from 'vuexfire'
+
     import { dollars } from '../filter.js';
     import Navbar from './Navbar'
     import Footer from './Footer'
@@ -63,8 +65,8 @@
             shoppingCart() { return this.$store.getters.shoppingCart; }
         },
         methods: {
-            addToCart(invId) {
-                this.$store.dispatch('addToCart', invId);
+            addToCart(name) {
+                this.$store.dispatch('addToCart', name);
             }
         }
     }
