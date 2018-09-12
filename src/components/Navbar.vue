@@ -1,28 +1,25 @@
 <template>
-
     <div class='navbar'>
         <div class="navbar">
-
             <nav class="nav-wrapper blue-grey darken-1">
                 <a id='specialA' class="brand-logo center">Geek Stuff</a>
                 <a href="#" class="sidenav-trigger" data-target="mobile-links">
                     <i class="material-icons">menu</i>
                 </a>
                 <ul class="right hide-on-med-and-down">
-                    <!--<router-link to='/' tag='li' style='cursor:pointer'>Home</router-link>-->
+                    <router-link to='/' tag='li' style='cursor:pointer'>Home</router-link>
                     <router-link to='/products' tag='li' style='cursor:pointer'>Products</router-link>
                     <router-link to='/createproduct' tag='li' style='cursor:pointer'>Create Product</router-link>
-                    <li><a href="" class="btn white indigo-text">Login</a></li>
+                    <li><a @click="alertUser" href="" class="btn white indigo-text">Login</a></li>
                 </ul>
             </nav>
-
         </div>
         <!--using a href links so page reloads here-->
         <ul class="sidenav" id="mobile-links">
-            <!--<li>
+            <li>
                 <a href="/">Home</a>
-                <router-link to='/' style='cursor:pointer; text-decoration:none'>Home</router-link>
-            </li>-->
+                <!--<router-link to='/' style='cursor:pointer; text-decoration:none'>Home</router-link>-->
+            </li>
             <li>
                 <a href="/products">Products</a>
                 <!--<router-link :to="/products" style='cursor:pointer; text-decoration:none'>View Products</router-link>-->
@@ -32,17 +29,12 @@
                 <!--<router-link to='/createproduct' style='cursor:pointer; text-decoration:none'>Create Product</router-link>-->
             </li>
         </ul>
-
-
         <!--<ul class="sidenav" id="mobile-links">
             <router-link to='/' tag='li' style='cursor:pointer'>Home</router-link>
             <router-link to='/products' tag='li' style='cursor:pointer'>View Products</router-link>
             <router-link to='/createProduct' tag='li' style='cursor:pointer'>Create Product</router-link>
         </ul>-->
     </div>
-
-
-
 </template>
 
 <script>
@@ -64,6 +56,9 @@
 
         }),
         methods: {
+            alertUser() {
+                alert('Login authentication has not been implemented yet. You are free to roam around with signing in')
+            }
 
         }
 
