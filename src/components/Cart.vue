@@ -35,6 +35,7 @@
                         <v-spacer></v-spacer>
                         <v-btn color="green darken-1" flat @click.native="dialog=false">Keep Shopping</v-btn>
                         <v-btn color="green darken-1" flat @click='checkingOut' @click.native="dialog=false">Checkout</v-btn>
+
                     </v-card-actions>
                 </v-card>
             </v-dialog>
@@ -73,8 +74,8 @@
             },
             checkingOut() {
                 //@click.native="dialog=false"
-                alert('If this was a production app, you would be taken to a page showing information about how the items will be sent to you. But that functionality has not been implemented yet.')
-
+                //alert('If this was a production app, you would be taken to a page showing information about how the items will be sent to you. functionality has not been implemented yet.')
+                this.$router.push('/checkout')
             }
         }
     };

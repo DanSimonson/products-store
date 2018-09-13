@@ -32,6 +32,8 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
   * {
     margin: 0;
     padding: 0;
@@ -39,7 +41,8 @@
 
   body {
     margin: 0;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: 'Roboto Slab', serif;
+    /*font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;*/
     font-size: 17px;
     color: whitesmoke;
     line-height: 1.6;

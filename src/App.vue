@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view />
+    <transition name="router-anim" enter-active-class="animated fadeIn" leave-acitve-class="animated fadeOut">
+      <router-view />
+    </transition>
   </div>
 </template>
 
@@ -21,6 +23,24 @@
 </script>
 
 <style>
+  .enter-active-class {
+    animation-duration: 1s;
+    animation-delay: .5s;
+    /*
+    animation-iteration-count: 6;    
+    animation-delay: 1s;    
+    */
+  }
+
+  .enter-active-class {
+    animation-duration: 1s;
+
+    /*
+    animation-iteration-count: 6;    
+    animation-delay: 1s;    
+    */
+  }
+
   #app {
     /*
     font-family: 'Avenir', Helvetica, Arial, sans-serif;

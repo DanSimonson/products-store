@@ -3,7 +3,10 @@
         <Navbar />
         <div id='topRow' class="row">
             <div class='col m8'>
-                <h4>Online Store</h4>
+                <!--<h4>Online Store</h4>-->
+                <v-chip label color="#546E7A" text-color="white">
+                    <v-icon left>store</v-icon>ONLINE STORE
+                </v-chip>
             </div>
             <div class='col m4'>
                 <!--<a class="waves-effect blue-grey darken-1 black-text btn-large">Cart: {{shoppingCart.length}}</a>-->
@@ -33,8 +36,10 @@
             <!--{{forSale}} used for testing-->
 
         </div>
+        <div class='spacer'></div>
         <Footer />
     </div>
+
 
 </template>
 
@@ -85,5 +90,10 @@
     .card {
         height: 500px;
         overflow: hidden;
+
+    }
+
+    .spacer {
+        height: 20px;
     }
 </style>
