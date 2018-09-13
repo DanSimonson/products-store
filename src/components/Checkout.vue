@@ -38,14 +38,12 @@
         text-align: center;
     }
 
-
-
     #box {
         /*background-color: white;*/
         border: 25px solid #78909C;
         padding: 25px;
-        width: 500px;
-        height: 500px;
+        width: 300px;
+        height: 300px;
         position: absolute;
         top: 0;
         bottom: 0;
