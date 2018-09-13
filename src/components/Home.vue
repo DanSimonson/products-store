@@ -58,9 +58,17 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    /*background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     padding: 0 20px;
     margin-bottom: 20px;
-    /*color: black;
+    color: black;
     #8D6E63;*/
   }
 
