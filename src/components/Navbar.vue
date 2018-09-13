@@ -75,7 +75,7 @@
             },
             userLogout() {
                 Firebase.auth().signOut().then(() => {
-                    this.$router.push('/login')
+                    this.$router.push({ name: 'Login' })
                 })
             }
 

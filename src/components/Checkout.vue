@@ -4,10 +4,7 @@
         <!--<div class='container'>-->
         <transition appear appear-name="custom-classes-transition" appear-active-class="animated flipInX">
             <div v-if="showBox" id='box'>This is where the address and other information would be to
-                send the
-                items
-                you ordered if
-                this was a production application</div>
+                send theitems you ordered if this was a production application</div>
         </transition>
         <!--</div>-->
         <Footer />
