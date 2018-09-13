@@ -16,7 +16,7 @@
         <!--'item.invId'>-->
         <div class="row">
             <div class="col m3" v-for="(item, index) in forSale">
-                <div class="card blue-grey darken-1">
+                <div class="card blue-grey darken-1 white-text">
                     <div class="card-image">
                         <img :src="item.image" alt="">
                         <a class="halfway-fab btn-floating pink pulse" @click="addToCart(item.name)">
