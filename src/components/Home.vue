@@ -49,7 +49,7 @@
   }
 
   #showcase {
-    background-image: url('https://cdn.buttercms.com/925sYi0eTXq1SBTrHK4T');
+    background-image: url('https://cdn.buttercms.com/OUEb12H8TT6nV2fOPPSE');
 
     /*background-color: grey;*/
     background-size: cover;
