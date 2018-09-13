@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <!--<Navbar />-->
+    <Navbar />
     <header id="showcase">
       <h1>mariposaweb online store demonstration</h1>
       <p>Open An Online Store </p>
@@ -8,7 +8,7 @@
       <!--<router-link to="/products" style='cursor:pointer; text-decoration:none'><a class="button">See More</a></router-link>-->
 
     </header>
-    <!--<Footer />-->
+    <Footer />
   </div>
 </template>
 
