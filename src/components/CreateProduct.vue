@@ -75,7 +75,7 @@
                     invId: ''
                 }
                 this.$store.dispatch('createProduct', product)
-                //this.$router.push('/products')
+                this.$router.push('/products')
             }
         }
     }

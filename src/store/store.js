@@ -58,12 +58,12 @@ export default new Vuex.Store({
     createProduct(state, payload) {
       console.log(payload);
       const randomNumber = Math.floor(Math.random() * 500);
-      /*for (var i = 0; i < state.forSale.length; i++) {
+      for (var i = 0; i < state.forSale.length; i++) {
         if (randomNumber !== state.forsale[i].invId) {
           payload.invId = randomNumber;
           break;
         }
-      }*/
+      }
       state.forSale.forEach(product => {
         //product.price -= payload
         if (randomNumber !== product.invId) {
