@@ -49,7 +49,9 @@
   }
 
   #showcase {
-    background-image: url('https://res.cloudinary.com/dmglopmul/image/upload/v1536852364/onlineStore.jpg');
+    /*background-image: url('https://res.cloudinary.com/dmglopmul/image/upload/v1536852364/onlineStore.jpg');
+    */
+    background-color: grey;
     background-size: cover;
     background-position: center;
     height: 100vh;
