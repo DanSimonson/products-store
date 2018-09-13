@@ -2,7 +2,7 @@
   <div id="home">
     <!--<Navbar />-->
     <header id="showcase">
-      <h1>mariposaweb online store demonstrator</h1>
+      <h1>mariposaweb online store demonstration</h1>
       <p>Open An Online Store </p>
       <a href="/products" class="button">See More</a>
       <!--<router-link to="/products" style='cursor:pointer; text-decoration:none'><a class="button">See More</a></router-link>-->
