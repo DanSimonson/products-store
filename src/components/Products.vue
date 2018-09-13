@@ -19,7 +19,7 @@
                 <div class="card blue-grey darken-1">
                     <div class="card-image">
                         <img :src="item.image" alt="">
-                        <a class="halfway-fab btn-floating pink pulse" @click="addToCart({index})">
+                        <a class="halfway-fab btn-floating pink pulse" @click="addToCart(item.name)">
                             <!--item.invId-->
                             <i class="material-icons">
                                 add_shopping_cart
