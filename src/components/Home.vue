@@ -44,7 +44,7 @@
     font-family: 'Roboto Slab', serif;
     /*font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;*/
     font-size: 17px;
-    color: whitesmoke;
+    /*color: whitesmoke;*/
     line-height: 1.6;
   }
 
