@@ -2,8 +2,8 @@
     <div class='login-page'>
         <Navbar />
         <div class="login container">
-            <form class="card-panel" @submit.prevent="login">
-                <h2 class="center blue-grey-text">Login</h2>
+            <form class="card-panel black-text" @submit.prevent="login">
+                <h2 class="center black-text">Login</h2>
                 <div class="field">
                     <label for="email">Email</label>
                     <input id="email" type="email" v-model="email">
@@ -83,6 +83,10 @@
 
     .login .field {
         margin-bottom: 16px;
+    }
+
+    .container {
+        max-width: 500px;
     }
 
     .container .row {

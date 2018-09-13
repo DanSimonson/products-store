@@ -2,9 +2,9 @@
     <div id="createproduct">
         <Navbar />
         <v-container>
-            <v-layout row>
+            <v-layout row class="black--text">
                 <v-flex xs12 sm6 offset-sm3>
-                    <h4>Create a new Meetup</h4>
+                    <h4 class='blackText'>Create a new Meetup</h4>
                 </v-flex>
             </v-layout>
             <v-layout row>
@@ -80,5 +80,8 @@
         }
     }
 </script>
-<style>
+<style scoped>
+    .blackText {
+        color: black;
+    }
 </style>
