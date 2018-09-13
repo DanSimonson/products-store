@@ -44,14 +44,14 @@
     font-family: 'Roboto Slab', serif;
     /*font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;*/
     font-size: 17px;
-    /*color: whitesmoke;*/
+    color: #827717;
     line-height: 1.6;
   }
 
   #showcase {
-    /*background-image: url('https://res.cloudinary.com/dmglopmul/image/upload/v1536852364/onlineStore.jpg');
-    */
-    background-color: grey;
+    background-image: url('https://cdn.buttercms.com/D8EpIvwSWm7FSZNz7NJi');
+
+    /*background-color: grey;*/
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -86,8 +86,8 @@
   #showcase .button {
     font-size: 18px;
     text-decoration: none;
-    color: white;
-    border: white 1px solid;
+    color: #827717;
+    border: #827717 1px solid;
     padding: 10px 20px;
     border-radius: 10px;
     margin-top: 20px;
