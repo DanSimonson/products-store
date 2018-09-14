@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <Navbar />
+    <!--<Navbar />-->
     <header id="showcase">
       <h1>mariposaweb online store demonstration</h1>
       <p>Open An Online Store </p>
@@ -8,7 +8,7 @@
       <!--<router-link to="/products" style='cursor:pointer; text-decoration:none'><a class="button">See More</a></router-link>-->
 
     </header>
-    <Footer />
+    <!--<Footer />-->
   </div>
 </template>
 
@@ -31,7 +31,7 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
   @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 
   * {
@@ -39,7 +39,8 @@
     padding: 0;
   }
 
-  body {
+  body,
+  html {
     margin: 0;
     font-family: 'Roboto Slab', serif;
     /*font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;*/
@@ -60,6 +61,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: #827717;
     /*background-size: cover;
     background-position: center;
     height: 100vh;
@@ -84,10 +86,11 @@
   }
 
   #showcase .button {
-    font-size: 18px;
+    font-size: 20px;
     text-decoration: none;
     color: #827717;
     border: #827717 1px solid;
+    font-weight: 900;
     padding: 10px 20px;
     border-radius: 10px;
     margin-top: 20px;
@@ -96,6 +99,7 @@
   #showcase .button:hover {
     background: white;
     color: #BF360C;
+    font-weight: 300;
   }
 
   #showcase a {
