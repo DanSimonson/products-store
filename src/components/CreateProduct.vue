@@ -4,7 +4,7 @@
         <v-container>
             <v-layout row class="black--text">
                 <v-flex xs12 sm6 offset-sm3>
-                    <h4 class='blackText'>Create a new Meetup</h4>
+                    <h4 class='blackText'>Create a new Product</h4>
                 </v-flex>
             </v-layout>
             <v-layout row>
