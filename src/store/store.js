@@ -3,8 +3,13 @@ import Vuex from "vuex";
 import * as firebase from "firebase";
 import { firebaseMutations } from "vuexfire";
 import { firebaseAction } from "vuexfire";
+import VuexPersist from "vuex-persist";
 
 Vue.use(Vuex);
+const vuexPersist = new VuexPersist({
+  key: "my-app",
+  storage: localStorage
+});
 
 export default new Vuex.Store({
   //mutations: { ...firebaseMutations },
@@ -110,5 +115,6 @@ export default new Vuex.Store({
     setProductsRef: firebaseAction(({ bindFirebaseRef }, { ref }) => {
       bindFirebaseRef("forSale", ref);
     })
-  }
+  },
+  plugins: [vuexPersist.plugin]
 });
